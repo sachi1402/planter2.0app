@@ -1,5 +1,4 @@
 import * as tf from '@tensorflow/tfjs'
-import * as tfCore from '@tensorflow/tfjs-core'
 import * as tfReact from '@tensorflow/tfjs-react-native'
 import * as FileSystem from 'expo-file-system'
 import '@tensorflow/tfjs-react-native'
@@ -7,7 +6,7 @@ import '@tensorflow/tfjs-react-native'
 const options = { encoding: FileSystem.EncodingType.Base64 }
 
 // prettier-ignore
-const transformImageToTensor = async (uri: string, width :number, height:number): Promise<tfCore.Tensor> => {
+const transformImageToTensor = async (uri, width, height) => {
   await tf.ready()
   console.log('\n [Running Converter process] \n')
 
