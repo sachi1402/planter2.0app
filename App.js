@@ -8,7 +8,9 @@ import transformImageToTensor from './utils/TfConverter';
 
 function App() {
   const [modelstate, setmodelstate] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(true)
+  const [isPredicting, setIsPredicting] = useState(false)
+  const [prediction, setPrediction] = useState(null)
 
   useEffect(() => {
     async function loadModel() {
@@ -22,7 +24,7 @@ function App() {
       console.log("[+] Loading pre-trained ")
       setmodelstate(modelLoader)
       console.log("[+] Model Loaded")
-      setIsLoaded(true)
+      setIsLoaded(false)
     }
     loadModel()
   }, []);
@@ -41,8 +43,9 @@ function App() {
   }
 
   const handlepredict = async (url) => {
+    setPrediction(null)
     console.log(url);
-
+    setIsPredicting(true)
     const imageResize = await runTfConverter(url)
     console.log(imageResize, 'resixe');
     const upscale = imageResize.expandDims(0)
@@ -58,12 +61,13 @@ function App() {
       const max = Math.max(...fei[0]);
       const index = fei[0].indexOf(max);
       console.log("index:", index);
-      setpred(desis[index])
-      console.log(desis[index], 'fei', desis.length)
+      setPrediction(index)
+      // console.log(desis[index], 'fei', desis.length)
+      setIsPredicting(false)
     })();
   }
   return (
-    <HomeScreen handlepredict={handlepredict} isLoaded={isLoaded} />
+    <HomeScreen handlepredict={handlepredict} isLoaded={isLoaded} isPredicting={isPredicting} prediction={prediction} />
   );
 
 }

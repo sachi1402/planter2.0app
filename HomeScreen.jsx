@@ -4,15 +4,18 @@ import { Camera } from 'expo-camera';
 import * as ImagePicker from 'expo-image-picker';
 import { Entypo, MaterialIcons } from '@expo/vector-icons';
 import LottieView from 'lottie-react-native';
+import Popup from './components/Popup';
 
 
-export default function HomeScreen({ handlepredict, isLoaded }) {
+export default function HomeScreen({ handlepredict, isLoaded, isPredicting, prediction }) {
 
   const cameraRef = useRef()
 
   const [hasCameraPermission, setHasCameraPermission] = useState(null);
   const [hasGalleryPermission, setHasGalleryPermission] = useState(null);
   const [type, setType] = useState(Camera.Constants.Type.back);
+  const [openPopup, setOpenPopup] = useState(false)
+  const [image, setImage] = useState(null)
 
 
 
@@ -30,14 +33,20 @@ export default function HomeScreen({ handlepredict, isLoaded }) {
     console.log("log cam");
     if (cameraRef.current) {
       const photo = await cameraRef.current.takePictureAsync();
-      handlepredict(photo.uri);
+      if (photo?.uri) {
+        setImage(photo.uri)
+        handlepredict(photo.uri);
+        setOpenPopup(true)
+      }
     }
   };
 
   const pickImage = async () => {
     const result = await ImagePicker.launchImageLibraryAsync();
     if (!result.canceled) {
+      setImage(result.assets[0].uri)
       handlepredict(result.assets[0].uri);
+      setOpenPopup(true)
     }
   };
 
@@ -52,16 +61,18 @@ export default function HomeScreen({ handlepredict, isLoaded }) {
     <View style={styles.container}>
       <Camera style={styles.camera} ref={cameraRef} type={type}>
         <View style={styles.info}>
-          {/* {isLoaded && <LottieView
-        autoPlay
-        style={{
-          width: 200,
-          height: 200,
-          // backgroundColor: '#eee',
-        }}
-        // Find more Lottie files at https://lottiefiles.com/featured
-        source={require('./assets/gradientBall.json')}
-      />} */}
+          {isLoaded && <>
+            <LottieView
+              autoPlay
+              loop
+              style={{
+                width: 300,
+                height: 300,
+              }}
+              source={require('./assets/loading.json')}
+            />
+            <Text style={styles.text}>Loading Model...</Text>
+          </>}
         </View>
         <View style={styles.btnCont}>
           <TouchableOpacity style={styles.galleryButton} onPress={() => {
@@ -82,6 +93,7 @@ export default function HomeScreen({ handlepredict, isLoaded }) {
           </TouchableOpacity>
         </View>
       </Camera>
+      {openPopup && <Popup image={image} isPredicting={isPredicting} handleClose={() => { setOpenPopup(false) }} prediction={prediction} />}
     </View>
   );
 }
