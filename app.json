@@ -11,6 +11,22 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "resolver": {
+      
+      "assetExts": [  "bin",
+      "expo-font",
+      "expo-asset",
+      "png",
+      "jpg",
+      "jpeg",
+      "gif",
+      "bmp",
+      "tiff",
+      "webp",
+      "svg",
+      "json"
+    ]
+    },
     "assetBundlePatterns": [
       "**/*",
       "assets/model/*"
@@ -22,10 +38,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ssachin1402.testAI"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "38505481-060c-46d4-869a-845200e15e03"
+      }
     }
   }
 }
