@@ -5,7 +5,7 @@ import { fetch, bundleResourceIO } from '@tensorflow/tfjs-react-native';
 import HomeScreen from './HomeScreen';
 import { manipulateAsync } from 'expo-image-manipulator';
 import transformImageToTensor from './utils/TfConverter';
-
+import plantData from './assets/plantData'
 function App() {
   const [modelstate, setmodelstate] = useState(null);
   const [isLoaded, setIsLoaded] = useState(true)
@@ -62,7 +62,11 @@ function App() {
       const max = Math.max(...fei[0]);
       const index = fei[0].indexOf(max);
       console.log("index:",index ,'+length of predic arr=',fei[0].length,'+length of dois arr is = ',desis.length);
-      setPrediction(index<29 ? desis[index]: desis[29])
+      setPrediction(index<32 ? plantData[index]: {
+        name: "unrecognized",
+        title: "unrecognized",
+        description: " "
+    })
       // console.log(desis[index], 'fei', desis.length)
       setIsPredicting(false)
     })();

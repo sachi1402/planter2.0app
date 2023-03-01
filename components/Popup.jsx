@@ -21,7 +21,8 @@ const Popup = ({ image, isPredicting, handleClose, prediction }) => {
                         <Text style={styles.text}>Scanning Image...</Text>
                     </>}
                 </ImageBackground>
-                <Text style={styles.value}>{prediction}</Text>
+                <Text style={styles.value}>{prediction?.title}</Text>
+                <Text style={styles.para}>{prediction?.description}</Text>
                 <Button style={styles.button} title={"Close"} onPress={handleClose} />
             </View>
         </Modal>
@@ -73,7 +74,15 @@ const styles = StyleSheet.create({
         margin: 15,
         fontWeight: 'bold',
         textAlign: 'center',
-        fontSize: 28
+        fontSize: 18
+    },
+    para :{
+        color: '#473C33',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop:10,
+        color:'#0004',
+        
     },
     button: {
         backgroundColor: 'blue',
