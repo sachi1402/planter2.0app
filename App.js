@@ -11,7 +11,8 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(true)
   const [isPredicting, setIsPredicting] = useState(false)
   const [prediction, setPrediction] = useState(null)
-
+  const desis = ["Apple   Apple scab", "Apple   Black rot", "Apple   Cedar apple rust", "Apple   healthy", "Blueberry   healthy", "Cherry (including sour)   healthy", "Cherry (including sour)   Powdery mildew", "Corn (maize)   Cercospora leaf spot Gray leaf spot", "Corn (maize)  Common rust", "Corn (maize)   healthy", "Corn (maize)   Northern Leaf Blight", "Grape   Black rot", "Grape  Esca(Black Measles)", "Grape   healthy", "Grape  Leaf blight(Isariopsis Leaf Spot)", "Orange  Haunglongbing(Citrus greening)", "Peach   Bacterial spot", "Peach   healthy", "Pepper,bell  Bacterial spot", "Pepper,bell  healthy", "Potato   Early blight", "Potato   healthy", "Potato   Late blight", "Raspberry   healthy", "Soybean   healthy", "Squash   Powdery mildew", "Strawberry   healthy", "Strawberry   Leaf scorch", "Tomato   Bacterial spot","Unrecognized"]
+ 
   useEffect(() => {
     async function loadModel() {
       console.log("[+] Application started")
@@ -60,8 +61,8 @@ function App() {
 
       const max = Math.max(...fei[0]);
       const index = fei[0].indexOf(max);
-      console.log("index:", index);
-      setPrediction(index)
+      console.log("index:",index ,'+length of predic arr=',fei[0].length,'+length of dois arr is = ',desis.length);
+      setPrediction(index<29 ? desis[index]: desis[29])
       // console.log(desis[index], 'fei', desis.length)
       setIsPredicting(false)
     })();

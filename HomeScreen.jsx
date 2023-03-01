@@ -85,10 +85,10 @@ export default function HomeScreen({ handlepredict, isLoaded, isPredicting, pred
             <MaterialIcons name="flip-camera-android" size={30} color="white" />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.captureButton} onPress={takePicture}>
+          <TouchableOpacity style={styles.captureButton} onPress={isLoaded ? ()=> console.log('sssss'):takePicture }>
             <View style={styles.captureRing} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.galleryButton} onPress={pickImage}>
+          <TouchableOpacity style={styles.galleryButton} onPress={isLoaded ?()=> console.log('ssw'):  pickImage}>
             <Entypo name="images" size={30} color="white" />
           </TouchableOpacity>
         </View>

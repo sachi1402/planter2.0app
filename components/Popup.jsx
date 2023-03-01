@@ -5,7 +5,7 @@ import LottieView from 'lottie-react-native';
 
 const Popup = ({ image, isPredicting, handleClose, prediction }) => {
     return (
-        <Modal style={styles.container}>
+        <Modal style={styles.container} transparent={true} >
             <View style={styles.popupContainer}>
                 <ImageBackground source={{ uri: image }} style={styles.image} resizeMethod="resize" >
                     {isPredicting && <>
@@ -32,19 +32,21 @@ export default Popup
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        // flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
         width: '100%',
         height: '100%',
-        backgroundColor: '#000'
+       
     },
     popupContainer: {
         width: '90%',
+        alignSelf: 'center',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'white',
+        backgroundColor: '#ABC270',
+        marginTop: "40%",
         padding: 20,
         borderRadius: 20
     },
@@ -59,12 +61,18 @@ const styles = StyleSheet.create({
     },
     text: {
         color: 'white',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontWeight: 'bold',
+        marginTop:-20,
+        color:'#0004',
         marginBottom: 10
     },
     value: {
-        color: '#000',
+        color: '#473C33',
         margin: 15,
         fontWeight: 'bold',
+        textAlign: 'center',
         fontSize: 28
     },
     button: {
