@@ -11,26 +11,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "resolver": {
-      
-      "assetExts": [  "bin",
-      "expo-font",
-      "expo-asset",
-      "png",
-      "jpg",
-      "jpeg",
-      "gif",
-      "bmp",
-      "tiff",
-      "webp",
-      "svg",
-      "json"
-    ]
-    },
-    "assetBundlePatterns": [
-      "**/*",
-      "assets/model/*"
-    ],
+    "assetBundlePatterns": ["**/*", "assets/model/*"],
     "ios": {
       "supportsTablet": true
     },
