@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@expo/webpack-config": "^18.0.1",
     "@react-native-community/async-storage": "^1.12.1",
     "@react-native-community/image-editor": "^2.3.0",
     "@tensorflow-models/blazeface": "0.0.5",

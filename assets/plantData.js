@@ -81,7 +81,7 @@ const plantDiseases = [
     },
     {
         name: "Peach___Bacterial_spot",
-        title: "Peach Bacterial Spot",
+        title: " Tomato Peach Bacterial Spot",
         description: "Peach bacterial spot is a bacterial disease that can cause dark spots on the leaves and fruit of peach trees."
     },
     {
