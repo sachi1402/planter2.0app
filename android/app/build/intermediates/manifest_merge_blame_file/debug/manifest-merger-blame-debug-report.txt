@@ -1,0 +1,362 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ssachin1402.testAI"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="33" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:6:3-75
+11-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:6:20-73
+12    <uses-permission android:name="android.permission.CAMERA" />
+12-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:2:3-62
+12-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:2:20-60
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:3:3-64
+13-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:3:20-62
+14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+14-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:4:3-77
+14-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:4:20-75
+15    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+15-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:5:3-68
+15-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:5:20-66
+16    <uses-permission android:name="android.permission.VIBRATE" />
+16-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:7:3-63
+16-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:7:20-61
+17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+17-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:8:3-78
+17-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:8:20-76
+18
+19    <queries>
+19-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:9:3-15:13
+20        <intent>
+20-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:10:5-14:14
+21            <action android:name="android.intent.action.VIEW" />
+21-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:11:7-58
+21-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:11:15-56
+22
+23            <category android:name="android.intent.category.BROWSABLE" />
+23-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:12:7-67
+23-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:12:17-65
+24
+25            <data android:scheme="https" />
+25-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:13:7-37
+25-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:13:13-35
+26        </intent>
+27        <!-- Query open documents -->
+28        <intent>
+28-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-17:18
+29            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+29-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-79
+29-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:21-76
+30        </intent>
+31        <intent>
+31-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-20:18
+32
+33            <!-- Required for picking images from the camera roll if targeting API 30 -->
+34            <action android:name="android.media.action.IMAGE_CAPTURE" />
+34-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-73
+34-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:21-70
+35        </intent>
+36        <intent>
+36-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-25:18
+37
+38            <!-- Required for picking images from the camera if targeting API 30 -->
+39            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE" />
+39-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-80
+39-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:21-77
+40        </intent>
+41        <intent>
+41-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:10:9-16:18
+42            <action android:name="android.intent.action.GET_CONTENT" />
+42-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:11:13-72
+42-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:11:21-69
+43
+44            <category android:name="android.intent.category.OPENABLE" />
+44-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:13:13-73
+44-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:13:23-70
+45
+46            <data android:mimeType="*/*" />
+46-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:13:7-37
+47        </intent>
+48    </queries>
+49
+50    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+50-->[com.facebook.flipper:flipper:0.125.0] C:\Users\ssour\.gradle\caches\transforms-3\92ad11363d6a6f1ea5a8b9f3f48d9338\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:16:5-76
+50-->[com.facebook.flipper:flipper:0.125.0] C:\Users\ssour\.gradle\caches\transforms-3\92ad11363d6a6f1ea5a8b9f3f48d9338\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:16:22-73
+51
+52    <uses-feature
+52-->[:expo-gl] C:\React Neative\Projects\planter2.0app\node_modules\expo-gl\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-9:36
+53        android:glEsVersion="0x00020000"
+53-->[:expo-gl] C:\React Neative\Projects\planter2.0app\node_modules\expo-gl\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-41
+54        android:required="false" />
+54-->[:expo-gl] C:\React Neative\Projects\planter2.0app\node_modules\expo-gl\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:9-33
+55
+56    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+56-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-76
+56-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:22-73
+57    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+57-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-75
+57-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:22-72
+58
+59    <uses-feature
+59-->[com.google.android:cameraview:1.0.0] C:\Users\ssour\.gradle\caches\transforms-3\e3eb25f1301aee8b22025edc70a557e5\transformed\jetified-cameraview-1.0.0\AndroidManifest.xml:25:5-27:36
+60        android:name="android.hardware.camera"
+60-->[com.google.android:cameraview:1.0.0] C:\Users\ssour\.gradle\caches\transforms-3\e3eb25f1301aee8b22025edc70a557e5\transformed\jetified-cameraview-1.0.0\AndroidManifest.xml:26:9-47
+61        android:required="false" />
+61-->[com.google.android:cameraview:1.0.0] C:\Users\ssour\.gradle\caches\transforms-3\e3eb25f1301aee8b22025edc70a557e5\transformed\jetified-cameraview-1.0.0\AndroidManifest.xml:27:9-33
+62    <uses-feature
+62-->[com.google.android:cameraview:1.0.0] C:\Users\ssour\.gradle\caches\transforms-3\e3eb25f1301aee8b22025edc70a557e5\transformed\jetified-cameraview-1.0.0\AndroidManifest.xml:28:5-30:36
+63        android:name="android.hardware.camera.autofocus"
+63-->[com.google.android:cameraview:1.0.0] C:\Users\ssour\.gradle\caches\transforms-3\e3eb25f1301aee8b22025edc70a557e5\transformed\jetified-cameraview-1.0.0\AndroidManifest.xml:29:9-57
+64        android:required="false" />
+64-->[com.google.android:cameraview:1.0.0] C:\Users\ssour\.gradle\caches\transforms-3\e3eb25f1301aee8b22025edc70a557e5\transformed\jetified-cameraview-1.0.0\AndroidManifest.xml:30:9-33
+65
+66    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+66-->[com.android.installreferrer:installreferrer:1.0] C:\Users\ssour\.gradle\caches\transforms-3\1eccaf5e4d9191d46b70b4b246d12fcf\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
+66-->[com.android.installreferrer:installreferrer:1.0] C:\Users\ssour\.gradle\caches\transforms-3\1eccaf5e4d9191d46b70b4b246d12fcf\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
+67
+68    <application
+68-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:16:3-35:17
+69        android:name="com.testai.MainApplication"
+69-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:16:16-47
+70        android:allowBackup="true"
+70-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:16:162-188
+71        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+71-->[androidx.core:core:1.7.0] C:\Users\ssour\.gradle\caches\transforms-3\3c3d67745cc0055a2f3c7aa5c1d315d3\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+72        android:debuggable="true"
+73        android:icon="@mipmap/ic_launcher"
+73-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:16:81-115
+74        android:label="@string/app_name"
+74-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:16:48-80
+75        android:roundIcon="@mipmap/ic_launcher_round"
+75-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:16:116-161
+76        android:theme="@style/AppTheme"
+76-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:16:189-220
+77        android:usesCleartextTraffic="true" >
+77-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:16:221-256
+78        <meta-data
+78-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:17:5-82
+79            android:name="expo.modules.updates.ENABLED"
+79-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:17:16-59
+80            android:value="true" />
+80-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:17:60-80
+81        <meta-data
+81-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:18:5-93
+82            android:name="expo.modules.updates.EXPO_SDK_VERSION"
+82-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:18:16-68
+83            android:value="48.0.0" />
+83-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:18:69-91
+84        <meta-data
+84-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:19:5-105
+85            android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH"
+85-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:19:16-80
+86            android:value="ALWAYS" />
+86-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:19:81-103
+87        <meta-data
+87-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:20:5-99
+88            android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS"
+88-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:20:16-79
+89            android:value="0" />
+89-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:20:80-97
+90        <meta-data
+90-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:21:5-120
+91            android:name="expo.modules.updates.EXPO_UPDATE_URL"
+91-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:21:16-67
+92            android:value="https://exp.host/@sourabh58/testAI" />
+92-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:21:68-118
+93
+94        <activity
+94-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:22:5-33:16
+95            android:name="com.testai.MainActivity"
+95-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:22:15-43
+96            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+96-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:22:77-154
+97            android:exported="true"
+97-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:22:276-299
+98            android:label="@string/app_name"
+98-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:22:44-76
+99            android:launchMode="singleTask"
+99-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:22:155-186
+100            android:screenOrientation="portrait"
+100-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:22:300-336
+101            android:theme="@style/Theme.App.SplashScreen"
+101-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:22:230-275
+102            android:windowSoftInputMode="adjustResize" >
+102-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:22:187-229
+103            <intent-filter>
+103-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:23:7-26:23
+104                <action android:name="android.intent.action.MAIN" />
+104-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:24:9-60
+104-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:24:17-58
+105
+106                <category android:name="android.intent.category.LAUNCHER" />
+106-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:25:9-68
+106-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:25:19-66
+107            </intent-filter>
+108            <intent-filter>
+108-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:27:7-32:23
+109                <action android:name="android.intent.action.VIEW" />
+109-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:11:7-58
+109-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:11:15-56
+110
+111                <category android:name="android.intent.category.DEFAULT" />
+111-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:29:9-67
+111-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:29:19-65
+112                <category android:name="android.intent.category.BROWSABLE" />
+112-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:12:7-67
+112-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:12:17-65
+113
+114                <data android:scheme="com.ssachin1402.testAI" />
+114-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:13:7-37
+114-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:13:13-35
+115            </intent-filter>
+116        </activity>
+117        <activity
+117-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:34:5-106
+118            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+118-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:34:15-79
+119            android:exported="false" />
+119-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:34:80-104
+120
+121        <provider
+121-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-30:20
+122            android:name="expo.modules.filesystem.FileSystemFileProvider"
+122-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-74
+123            android:authorities="com.ssachin1402.testAI.FileSystemFileProvider"
+123-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-74
+124            android:exported="false"
+124-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
+125            android:grantUriPermissions="true" >
+125-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-47
+126            <meta-data
+126-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-29:70
+127                android:name="android.support.FILE_PROVIDER_PATHS"
+127-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-67
+128                android:resource="@xml/file_system_provider_paths" />
+128-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-67
+129        </provider>
+130
+131        <activity
+131-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:9-31:59
+132            android:name="com.canhub.cropper.CropImageActivity"
+132-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-64
+133            android:exported="true"
+133-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:35:13-36
+134            android:theme="@style/Base.Theme.AppCompat" /> <!-- https://developer.android.com/guide/topics/manifest/provider-element.html -->
+134-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:31:13-56
+135        <provider
+135-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:33:9-41:20
+136            android:name="expo.modules.imagepicker.fileprovider.ImagePickerFileProvider"
+136-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:34:13-89
+137            android:authorities="com.ssachin1402.testAI.ImagePickerFileProvider"
+137-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:35:13-75
+138            android:exported="false"
+138-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:36:13-37
+139            android:grantUriPermissions="true" >
+139-->[:expo-image-picker] C:\React Neative\Projects\planter2.0app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:37:13-47
+140            <meta-data
+140-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-29:70
+141                android:name="android.support.FILE_PROVIDER_PATHS"
+141-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-67
+142                android:resource="@xml/image_picker_provider_paths" />
+142-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-67
+143        </provider>
+144
+145        <meta-data
+145-->[:expo-modules-core] C:\React Neative\Projects\planter2.0app\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-10:89
+146            android:name="org.unimodules.core.AppLoader#react-native-headless"
+146-->[:expo-modules-core] C:\React Neative\Projects\planter2.0app\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-79
+147            android:value="expo.modules.adapters.react.apploader.RNHeadlessAppLoader" />
+147-->[:expo-modules-core] C:\React Neative\Projects\planter2.0app\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-86
+148
+149        <provider
+149-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:23:9-31:20
+150            android:name="com.canhub.cropper.CropFileProvider"
+150-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:24:13-63
+151            android:authorities="com.ssachin1402.testAI.cropper.fileprovider"
+151-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:25:13-72
+152            android:exported="false"
+152-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:26:13-37
+153            android:grantUriPermissions="true" >
+153-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:27:13-47
+154            <meta-data
+154-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-29:70
+155                android:name="android.support.FILE_PROVIDER_PATHS"
+155-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-67
+156                android:resource="@xml/library_file_paths" />
+156-->[:expo-file-system] C:\React Neative\Projects\planter2.0app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-67
+157        </provider> <!-- This is here because the library did not update yet to Android 12 so we force the exported value when merging manifests -->
+158        <activity
+158-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:38:9-45:20
+159            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+159-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:39:13-99
+160            android:exported="true"
+160-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:40:13-36
+161            android:theme="@android:style/Theme" >
+161-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:41:13-49
+162            <intent-filter>
+162-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:42:13-44:29
+163                <action android:name="android.intent.action.MAIN" />
+163-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:24:9-60
+163-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:24:17-58
+164            </intent-filter>
+165        </activity>
+166        <activity
+166-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:46:9-53:20
+167            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+167-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:47:13-95
+168            android:exported="true"
+168-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:48:13-36
+169            android:theme="@android:style/Theme" >
+169-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:49:13-49
+170            <intent-filter>
+170-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:42:13-44:29
+171                <action android:name="android.intent.action.MAIN" />
+171-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:24:9-60
+171-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:24:17-58
+172            </intent-filter>
+173        </activity>
+174        <activity
+174-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:54:9-61:20
+175            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+175-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:55:13-103
+176            android:exported="true"
+176-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:56:13-36
+177            android:theme="@android:style/Theme.Dialog" >
+177-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:57:13-56
+178            <intent-filter>
+178-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\ssour\.gradle\caches\transforms-3\d2ae70200f0d6294117df2c56e7051f2\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:42:13-44:29
+179                <action android:name="android.intent.action.MAIN" />
+179-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:24:9-60
+179-->C:\React Neative\Projects\planter2.0app\android\app\src\main\AndroidManifest.xml:24:17-58
+180            </intent-filter>
+181        </activity>
+182
+183        <provider
+183-->[androidx.emoji2:emoji2:1.0.0] C:\Users\ssour\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+184            android:name="androidx.startup.InitializationProvider"
+184-->[androidx.emoji2:emoji2:1.0.0] C:\Users\ssour\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+185            android:authorities="com.ssachin1402.testAI.androidx-startup"
+185-->[androidx.emoji2:emoji2:1.0.0] C:\Users\ssour\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+186            android:exported="false" >
+186-->[androidx.emoji2:emoji2:1.0.0] C:\Users\ssour\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+187            <meta-data
+187-->[androidx.emoji2:emoji2:1.0.0] C:\Users\ssour\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+188                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+188-->[androidx.emoji2:emoji2:1.0.0] C:\Users\ssour\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+189                android:value="androidx.startup" />
+189-->[androidx.emoji2:emoji2:1.0.0] C:\Users\ssour\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+190            <meta-data
+190-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\ssour\.gradle\caches\transforms-3\fc49bab9ad5b82206670bef3f766995b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+191                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+191-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\ssour\.gradle\caches\transforms-3\fc49bab9ad5b82206670bef3f766995b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+192                android:value="androidx.startup" />
+192-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\ssour\.gradle\caches\transforms-3\fc49bab9ad5b82206670bef3f766995b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+193        </provider>
+194    </application>
+195
+196</manifest>
