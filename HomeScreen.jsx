@@ -7,7 +7,7 @@ import LottieView from 'lottie-react-native';
 import Popup from './components/Popup';
 
 
-export default function HomeScreen({ handlepredict, isLoaded, isPredicting, prediction }) {
+export default function HomeScreen({ handlepredict, isLoaded, isPredicting, prediction, toggleHistory, AddHistory }) {
 
   const cameraRef = useRef()
 
@@ -28,6 +28,20 @@ export default function HomeScreen({ handlepredict, isLoaded, isPredicting, pred
       setHasGalleryPermission(galleryStatus === 'granted');
     })();
   }, []);
+
+  useEffect(() => {
+    if (prediction && !isPredicting) {
+      // save the image and date to history
+      const data = {
+        image,
+        date: new Date().toLocaleDateString(),
+        ...prediction
+      }
+      AddHistory(data)
+
+    }
+  }, [isPredicting, prediction, image])
+
 
   const takePicture = async () => {
     console.log("log cam");
@@ -85,14 +99,16 @@ export default function HomeScreen({ handlepredict, isLoaded, isPredicting, pred
             <MaterialIcons name="flip-camera-android" size={30} color="white" />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.captureButton} onPress={isLoaded ? ()=> console.log('sssss'):takePicture }>
+          <TouchableOpacity style={styles.captureButton} onPress={isLoaded ? () => console.log('sssss') : takePicture}>
             <View style={styles.captureRing} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.galleryButton} onPress={isLoaded ?()=> console.log('ssw'):  pickImage}>
+          <TouchableOpacity style={styles.galleryButton} onPress={isLoaded ? () => console.log('ssw') : pickImage}>
             <Entypo name="images" size={30} color="white" />
           </TouchableOpacity>
         </View>
+
       </Camera>
+
       {openPopup && <Popup image={image} isPredicting={isPredicting} handleClose={() => { setOpenPopup(false) }} prediction={prediction} />}
     </View>
   );
@@ -149,5 +165,13 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
+  },
+  HistoryBtn: {
+    width: '100%',
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'blue',
+
   }
 })
